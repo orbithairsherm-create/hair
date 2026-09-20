@@ -7,4 +7,4 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 COPY docker/nginx.conf /etc/nginx/sites-available/default
 EXPOSE 10000
-CMD ["sh, -c, php-fpm -D && nginx -g ''daemon off;'']
+CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
