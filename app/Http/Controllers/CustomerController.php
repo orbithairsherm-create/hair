@@ -9,7 +9,7 @@ class CustomerController extends Controller
 {
     public function insert(Request $request)
     {
-        $data = new Customer();
+        $data = new customers();
 
         $data->name = $request->name;
         $data->contact = $request->contact;
